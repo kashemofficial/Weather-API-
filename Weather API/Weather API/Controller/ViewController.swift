@@ -31,6 +31,8 @@ class ViewController: UIViewController {
                 return
             }
             
+            // MARK: responseString
+            
             let responseString = String(decoding: data, as: UTF8.self)
             print("RESPONSE : " + responseString)
              
