@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Weather_API" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="weather1" translatesAutoresizingMaskIntoConstraints="NO" id="8hI-dg-yik">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="220.66666666666666"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updated" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ok8-4h-sXs">
+                                <rect key="frame" x="20" y="250.66666666666663" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R55-Mc-ZXI">
+                                <rect key="frame" x="20" y="307.66666666666669" width="374" height="36.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Country : " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOa-Lb-k5O" userLabel="Country :">
+                                <rect key="frame" x="20" y="364.33333333333331" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature (Celsius) " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkB-KA-NKC">
+                                <rect key="frame" x="20" y="421.33333333333331" width="374" height="36.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wind (Km/Hr) " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFw-ms-sNS">
+                                <rect key="frame" x="20" y="478" width="374" height="36.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Humidity " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd1-V6-bfH">
+                                <rect key="frame" x="20" y="534.66666666666663" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISH-1M-q6c">
+                                <rect key="frame" x="145" y="591.66666666666663" width="124" height="44"/>
+                                <color key="backgroundColor" red="1" green="0.055534328263828314" blue="0.99390485642338333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Refresh">
+                                    <fontDescription key="titleFontDescription" type="boldSystem" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="refreshData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RWy-mi-Kw8"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.84741855859437776" green="0.69560738628801244" blue="0.86078917980194092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="GkB-KA-NKC" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="2oy-ae-CWn"/>
+                            <constraint firstItem="8hI-dg-yik" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3FW-do-Hi6"/>
+                            <constraint firstItem="GkB-KA-NKC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="6h6-Zg-lkO"/>
+                            <constraint firstItem="R55-Mc-ZXI" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="73F-9F-lax"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="R55-Mc-ZXI" secondAttribute="trailing" constant="20" id="7Ak-Z3-uDs"/>
+                            <constraint firstItem="ISH-1M-q6c" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.3" id="AJf-2F-g6G"/>
+                            <constraint firstItem="8hI-dg-yik" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="Aze-uM-5Jw"/>
+                            <constraint firstItem="ISH-1M-q6c" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.06" id="BAs-FY-eWX"/>
+                            <constraint firstItem="R55-Mc-ZXI" firstAttribute="top" secondItem="Ok8-4h-sXs" secondAttribute="bottom" constant="20" id="C98-C5-Nq2"/>
+                            <constraint firstItem="oFw-ms-sNS" firstAttribute="top" secondItem="GkB-KA-NKC" secondAttribute="bottom" constant="20" id="ExV-Em-Won"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Nd1-V6-bfH" secondAttribute="trailing" constant="20" id="F28-HW-jn3"/>
+                            <constraint firstItem="ISH-1M-q6c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="He3-LR-ykp"/>
+                            <constraint firstItem="Nd1-V6-bfH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="Lnm-h2-Z3a"/>
+                            <constraint firstItem="ISH-1M-q6c" firstAttribute="top" secondItem="Nd1-V6-bfH" secondAttribute="bottom" constant="20" id="MBI-zz-wCb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ok8-4h-sXs" secondAttribute="trailing" constant="20" id="Mg1-Fo-xe8"/>
+                            <constraint firstItem="8hI-dg-yik" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="PKP-50-sxN"/>
+                            <constraint firstItem="lOa-Lb-k5O" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="S3F-7E-89a"/>
+                            <constraint firstItem="R55-Mc-ZXI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Vf9-jn-dil"/>
+                            <constraint firstItem="Ok8-4h-sXs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WDV-9D-nNP"/>
+                            <constraint firstItem="Nd1-V6-bfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WPz-6F-tr8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GkB-KA-NKC" secondAttribute="trailing" constant="20" id="ZHw-8D-Chj"/>
+                            <constraint firstItem="Ok8-4h-sXs" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="aNb-rN-S8J"/>
+                            <constraint firstItem="Nd1-V6-bfH" firstAttribute="top" secondItem="oFw-ms-sNS" secondAttribute="bottom" constant="20" id="f8i-fD-8E7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lOa-Lb-k5O" secondAttribute="trailing" constant="20" id="h0m-5e-2ST"/>
+                            <constraint firstItem="Ok8-4h-sXs" firstAttribute="top" secondItem="8hI-dg-yik" secondAttribute="bottom" constant="30" id="hOS-VG-f6R"/>
+                            <constraint firstItem="oFw-ms-sNS" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.05" id="j0z-ri-s8C"/>
+                            <constraint firstItem="GkB-KA-NKC" firstAttribute="top" secondItem="lOa-Lb-k5O" secondAttribute="bottom" constant="20" id="jrG-N1-Exp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8hI-dg-yik" secondAttribute="trailing" id="ny8-Mm-M2c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oFw-ms-sNS" secondAttribute="trailing" constant="20" id="orH-tb-Tp3"/>
+                            <constraint firstItem="oFw-ms-sNS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s5y-IE-ZJc"/>
+                            <constraint firstItem="lOa-Lb-k5O" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xOG-7D-CHR"/>
+                            <constraint firstItem="lOa-Lb-k5O" firstAttribute="top" secondItem="R55-Mc-ZXI" secondAttribute="bottom" constant="20" id="zOY-D8-rva"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countryLbl" destination="lOa-Lb-k5O" id="sMk-5D-oAJ"/>
+                        <outlet property="humidityLbl" destination="Nd1-V6-bfH" id="zl2-fR-FoC"/>
+                        <outlet property="regionLbl" destination="R55-Mc-ZXI" id="VFO-3o-91O"/>
+                        <outlet property="temperatureLbl" destination="GkB-KA-NKC" id="vcK-lp-4q8"/>
+                        <outlet property="updateTimeLbl" destination="Ok8-4h-sXs" id="Ubp-kv-PWs"/>
+                        <outlet property="windLbl" destination="oFw-ms-sNS" id="IXI-7q-PX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="44.927536231884062" y="3.2608695652173916"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="weather1" width="300" height="168"/>
+    </resources>
+</document>
