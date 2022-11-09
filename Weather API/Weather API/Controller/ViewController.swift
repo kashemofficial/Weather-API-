@@ -20,7 +20,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //MARK: method calling
         fetchData()
+        
     }
+    
     func fetchData(){
         let url = URL(string:         "https://api.weatherapi.com/v1/current.json?key=65a7aea3e395474187a20653220504&q=bangladesh&aqi=no")
         
